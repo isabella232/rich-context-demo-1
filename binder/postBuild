@@ -10,7 +10,7 @@ cd jupyterlab
 git checkout 119d39472c194f9878e6bc38e5d69d6912c3379d
 cd ..
 
-git clone https://github.com/jupyterlab/jupyterlab-metadata-service.git
+git clone https://github.com/quansight/jupyterlab-metadata-service.git
 cd jupyterlab-metadata-service
 git checkout 740ef7df5215f07fabf19f17c13efcd16c3b9a3d
 cd backend
