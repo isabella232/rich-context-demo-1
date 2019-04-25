@@ -26,7 +26,7 @@ cd ..
 
 git clone https://github.com/jupyterlab/jupyterlab-data-explorer.git
 cd jupyterlab-data-explorer
-git checkout 15048ad4331b8d9b6e1b76ec102963dbb980a744
+git checkout 2a8e69f5863f359dceeeea80ff010e763b52c1f9
 cd ..
 
 cd jupyterlab
