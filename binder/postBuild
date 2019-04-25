@@ -21,7 +21,7 @@ cd ../../..
 
 git clone --single-branch --branch add_annotations https://github.com/jupyterlab/jupyterlab-commenting.git
 cd jupyterlab-commenting
-git checkout 13f42315dc1dc24fa099c785f9085e1b69f0ce5c
+git checkout 2c42ce7bab7c70005c20dc5349bc89b375249081
 cd ..
 
 git clone https://github.com/jupyterlab/jupyterlab-data-explorer.git
