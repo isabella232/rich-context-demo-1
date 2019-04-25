@@ -31,10 +31,10 @@ cd ..
 
 cd jupyterlab
 pip install -e .
-jlpm run add:sibling ../jupyterlab-metadata-service/frontend
-jlpm run add:sibling ../jupyterlab-commenting
 jlpm run add:sibling ../jupyterlab-data-explorer/dataregistry
 jlpm run add:sibling ../jupyterlab-data-explorer/dataregistry-extension
+jlpm run add:sibling ../jupyterlab-metadata-service/frontend
+jlpm run add:sibling ../jupyterlab-commenting
 jlpm build:dev
 jupyter lab build --dev
 cd ../..
