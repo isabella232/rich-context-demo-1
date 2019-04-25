@@ -5,29 +5,36 @@ set -o xtrace
 mkdir build
 cd build
 
-git clone --single-branch --branch databus https://github.com/jupyterlab/jupyterlab.git
+git clone --single-branch --branch master https://github.com/jupyterlab/jupyterlab.git
 cd jupyterlab
-git checkout 119d39472c194f9878e6bc38e5d69d6912c3379d
+git checkout 4c264b78f9e3940f278cba44e308beef6c94a04d
 cd ..
 
-git clone https://github.com/quansight/jupyterlab-metadata-service.git
+git clone --single-branch --branch commenting-updates https://github.com/quansight/jupyterlab-metadata-service.git
 cd jupyterlab-metadata-service
-git checkout 740ef7df5215f07fabf19f17c13efcd16c3b9a3d
+git checkout 2c24c4cb55d81457054653572922985c4113c16e
 cd backend
 pip install -e .
 cd jupyterlab_metadata_service_server
 npm install
 cd ../../..
 
-git clone https://github.com/jupyterlab/jupyterlab-commenting.git
+git clone --single-branch --branch add_annotations https://github.com/jupyterlab/jupyterlab-commenting.git
 cd jupyterlab-commenting
-git checkout 50657301f91b59597b07c8a0d90c97c87695ea0b
+git checkout 13f42315dc1dc24fa099c785f9085e1b69f0ce5c
+cd ..
+
+git clone https://github.com/jupyterlab/jupyterlab-data-explorer.git
+cd jupyterlab-data-explorer
+git checkout 333a31e49bd84884e943692f4024f40e27610533
 cd ..
 
 cd jupyterlab
 pip install -e .
 jlpm run add:sibling ../jupyterlab-metadata-service/frontend
 jlpm run add:sibling ../jupyterlab-commenting
+jlpm run add:sibling ../jupyterlab-data-explorer/dataregistry
+jlpm run add:sibling ../jupyterlab-data-explorer/dataregistry-extension
 jlpm build:dev
 jupyter lab build --dev
 cd ../..
